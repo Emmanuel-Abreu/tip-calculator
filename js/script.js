@@ -74,7 +74,7 @@ function tipPerPerson(bill, numberOfPeople, tipPercentage)
 
 function totalPerPerson(bill, numberOfPeople, tipPercentage)
 {
-    return (bill / numberOfPeople ) + tipPerPerson;
+    return (bill / numberOfPeople ) + tipPerPerson(bill, numberOfPeople, tipPercentage);
 }
 
 const bill = document.getElementById("bill-input");
@@ -93,14 +93,17 @@ bill.addEventListener("change", function(bill)
 {
     const billVal = parseFloat(bill.value);
     console.log(billVal);
-    calcTipSplitter(bill, 15, .5)
 
 });
 
 const numberOfPeople = document.getElementById("people-input");
 console.log(numberOfPeople);
+
 numberOfPeople.addEventListener("change", function(numberOfPeople)
 {
     const peopleVal = parseInt(numberOfPeople.innerText);
     console.log(peopleVal);
 });
+
+document.querySelector("tip-calclation").querySelector("calc-display").innerText = tipPerPerson(bill, numPeople, .5);
+document.querySelector("total-calclation").querySelector("calc-display").innerText = totalPerPerson(bill, numPeople, .5);
