@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="background-container">
+    <div class="splitter-title">
+      <p>S P L I<br>T T E R</p>
+    </div>
+    <div class="calculator-container">
+      <div class="left-section">
+        <div class="bill-container">
+          <h2>Bill</h2>
+          <div class="bill-input">
+            <input type="text" name="bill-input" id="bill-input" placeholder="0">
+          </div>
+        </div>
+        <div class="tip-container">
+          <h2>Select Tip %</h2>
+          <button class="tip-percent-btn">5%</button>
+          <button class="tip-percent-btn">10%</button>
+          <button class="tip-percent-btn">15%</button>
+          <button class="tip-percent-btn">25%</button>
+          <button class="tip-percent-btn">50%</button>
+          <button class="custom-percent-btn">Custom</button>
+        </div>
+        <h2>Number of People</h2>
+        <div class="people-input">
+          <input type="text" name="people-input" id="people-input" placeholder="0">
+        </div>
+      </div>
+      <div class="right-section">
+        <div class="calculations">
+          <div class="tip-calculation">
+            <h2>Tip Amount <div class="smaller-calc-text">/ person</div></h2>
+            <div class="calc-display">$0.00</div>
+          </div>
+          <div class="total-calculation">
+            <h2>Total <div class="smaller-calc-text">/ person</div></h2>
+            <div class="calc-display">$0.00</div>
+          </div>
+          <div class="reset-btn">RESET</div>
+        </div>
+      </div>
+    </div>
+  </div>  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Emmanuel Abreu</a>.
+  </div>
+  <script async src="js/script.js"></script>
+</body>
+</html>
