@@ -68,6 +68,11 @@ h4
     
 }
 
+.bill-input #bill-input, .people-input #people-input
+{
+    width: 100%;
+}
+
 .bill-container
 {
     margin: 5px 5px;
@@ -84,7 +89,7 @@ h4
 .tip-container
 {
     width: 100%;
-    margin: 5px 5px;
+    margin: 0px 0px;
 }
 
 .select-tip-label

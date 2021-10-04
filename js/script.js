@@ -59,6 +59,11 @@ javascript becomes equal to the selected percent.
 
 });*/
 
+function getVal(element)
+{
+    return document.querySelector(element.value);
+}
+
 function calcTipSplitter(bill, numberOfPeople, tipPercentage)
 {
     let tipPerPerson = (bill * tipPercentage) / numberOfPeople;
@@ -80,15 +85,15 @@ function totalPerPerson(bill, numberOfPeople, tipPercentage)
 const bill = document.getElementById("bill-input");
 const numPeople = document.getElementById("people-input");
 const tipPercentage = document.querySelectorAll("tip-percent-btn custom-btn");
+console.log(bill.value);
+
+// tipPercentage.addEventListener("onclick", function(tipPercentage)
+// {
+//     const tipVal = parseFloat(tipPercentage.innerText);
+// });
 
 
-tipPercentage.addEventListener("onclick", function(tipPercentage)
-{
-    const tipVal = parseFloat(tipPercentage.innerText);
-});
-
-
-console.log(bill);
+console.log(bill.value);
 bill.addEventListener("change", function(bill)
 {
     const billVal = parseFloat(bill.value);
@@ -105,5 +110,6 @@ numberOfPeople.addEventListener("change", function(numberOfPeople)
     console.log(peopleVal);
 });
 
-document.querySelector("tip-calclation").querySelector("calc-display").innerText = tipPerPerson(bill, numPeople, .5);
-document.querySelector("total-calclation").querySelector("calc-display").innerText = totalPerPerson(bill, numPeople, .5);
+document.querySelector("tip-calculation").querySelector("calc-display").innerText = tipPerPerson(bill, numPeople, .5);
+console.log(tipPerPerson.value);
+document.querySelector("total-calculation").querySelector("calc-display").innerText = totalPerPerson(bill, numPeople, .5);
