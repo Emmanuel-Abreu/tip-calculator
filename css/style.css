@@ -218,6 +218,15 @@ h4
     height: 30px;
 }
 
+/*Dark mode color theme class selectors:
+
+.dm
+{
+    background-color: ;
+    color: ;
+}
+*/
+
 @media screen and (width: 375px)
 {
 

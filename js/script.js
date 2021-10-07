@@ -21,20 +21,6 @@ Questions:
 
 ## Logic:
 
-functions():
-- calcTipSplitter(bill, numberOfPeople, tipPercentage)
-{
-    let tipPerPerson = (bill * tipPercentage) / numberOfPeople;
-    let totalPerPerson = (bill / numberOfPeople) + totalTip;
-}
-
-const billInput = document.getElementById("bill");
-billInput.addEventListener("change", function()
-{
-    const bill = billInput.value;
-    calcTipSplitter(bill, 15, .5)
-});
-
 PSUEDOCODE
 -When/if the user presses enter on the bill input, the bill amount 
 variable becomes equal to the input, and then the "cursor"
@@ -48,34 +34,12 @@ javascript becomes equal to the selected percent.
 -After the information is entered, the tip amount/person and the total/person are displayed.
 
 -When the reset button is selected, the fields and variables are reset.
-
-.addEventListener("onclick", function()
-{
-    .innerHTML = ;
-})
-
-.addEventListener("onclick", function()
-{
-
-});*/
+*/
 
 function getVal(element)
 {
     return document.querySelector(element.value);
 }
-
-// function calcTipSplitter(bill, numberOfPeople, tipPercentage)
-// {
-//     let tipPerPerson = parseFloat((bill * tipPercentage) / numberOfPeople);
-//     let totalPerPerson = parseFloat((bill / numberOfPeople ) + tipPerPerson);
-//     if (!isFinite())
-//     {
-//         document.querySelector(".tip-calculation").querySelector(".calc-display").innerText = "$0.00";
-//         document.querySelector(".total-calculation").querySelector(".calc-display").innerText = "$0.00";
-//     }
-//     console.log(tipPerPerson.toFixed(2));
-//     console.log(totalPerPerson.toFixed(2));
-// }
 
 function tipPerPerson(bill, numberOfPeople, tipPercentage)
 {
@@ -115,8 +79,9 @@ buttons.forEach((button) =>
     {
         let tipPercent = button.dataset.num / 100;
         
-        document.querySelector(".tip-calculation").querySelector(".calc-display").innerHTML = "$" + parseFloat(tipPerPerson(bill.value, numPeople.value, tipPercent)).toFixed(2);
-        document.querySelector(".total-calculation").querySelector(".calc-display").innerHTML = "$" + parseFloat(totalPerPerson(bill.value, numPeople.value, tipPercent)).toFixed(2);
+        document.querySelector(".tip-calculation").querySelector(".calc-display").innerText = "$" + parseFloat(tipPerPerson(bill.value, numPeople.value, tipPercent)).toFixed(2);
+        document.querySelector(".total-calculation").querySelector(".calc-display").innerText = "$" + parseFloat(totalPerPerson(bill.value, numPeople.value, tipPercent)).toFixed(2);
+        console.log(document.querySelector(".total-calculation").querySelector(".calc-display").innerText);
     }
 )});
 
@@ -126,9 +91,8 @@ custom.addEventListener("change", function()
     {
         let tipPercent = custom.value / 100;
         console.log(tipPercent);
-        const val = parseFloat(custom.value);
-        document.querySelector(".tip-calculation").querySelector(".calc-display").innerHTML = "$" + parseFloat(tipPerPerson(bill.value, numPeople.value, tipPercent)).toFixed(2);
-        document.querySelector(".total-calculation").querySelector(".calc-display").innerHTML = "$" + parseFloat(totalPerPerson(bill.value, numPeople.value, tipPercent)).toFixed(2);
+        document.querySelector(".tip-calculation").querySelector(".calc-display").innerText = "$" + parseFloat(tipPerPerson(bill.value, numPeople.value, tipPercent)).toFixed(2);
+        document.querySelector(".total-calculation").querySelector(".calc-display").innerText = "$" + parseFloat(totalPerPerson(bill.value, numPeople.value, tipPercent)).toFixed(2);
     }
 );
 
@@ -137,8 +101,7 @@ const reset = document.querySelector(".reset-btn");
 reset.addEventListener("click", function()
 {
     let tipPercent = 0;
-    document.querySelector(".tip-calculation").querySelector(".calc-display").innerHTML = "$" + parseFloat(tipPerPerson(bill.value, numPeople.value, tipPercent)).toFixed(2);
-    document.querySelector(".total-calculation").querySelector(".calc-display").innerHTML = "$" + parseFloat(totalPerPerson(bill.value, numPeople.value, tipPercent)).toFixed(2);
+    document.querySelector(".tip-calculation").querySelector(".calc-display").innerText = "$" + parseFloat(tipPerPerson(bill.value, numPeople.value, tipPercent)).toFixed(2);
+    document.querySelector(".total-calculation").querySelector(".calc-display").innerText = "$" + parseFloat(totalPerPerson(bill.value, numPeople.value, tipPercent)).toFixed(2);
     console.log("$" + parseFloat(tipPerPerson(bill.value, numPeople.value, tipPercent)).toFixed(2))
-
 });
