@@ -97,26 +97,33 @@ h4
     font-size: 11px;
 }
 
-.tip-percent-btn
+.tipPerBtn
 {
     justify-content: space-around space-between;
     background-color: hsl(183deg 100% 15%);
-    color: white;
+    color: rgb(255, 255, 255);
     width: 75px;
     height: 30px;
     margin: 3px 0px;
     border-radius: 5px;
 }
 
-.custom-percent-btn
+.cusButton
 {
-    background-color: hsl(189, 41%, 97%);
-    color: hsl(184, 14%, 56%);
-    width: 75px;
-    height: 30px;
-    color: black;
-    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFF;
+    color: #FFF;
+    width: 71px;
+    height: 28px;
     margin: 3px 0px;
+    border-radius: 5px black solid;
+    border: 0;
+}
+
+.cusButton::placeholder{
+    color: rgb(99, 99, 99);
+    font-weight: 600;
 }
 
 .num-people-container
